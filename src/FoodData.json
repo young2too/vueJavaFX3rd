@@ -1,0 +1,146 @@
+[
+   {
+      "FoodSort":"한식",
+      "FoodName":"종로제면소",
+      "FoodAddress":"서울 종로구 돈화문로 55 (우)03133",
+      "FoodMenu":"칼국수,비빔국수,만두",
+      "FoodTel":"02-741-2351 ",
+      "FoodURL":"https://store.naver.com/restaurants/detail?entry=plt&id=36601145&query=%EC%A2%85%EB%A1%9C%EC%A0%9C%EB%A9%B4%EC%86%8C"
+   },
+   {
+      "FoodSort":"한식",
+      "FoodName":"찬양집",
+      "FoodAddress":"서울 종로구 돈화문로11다길 5",
+      "FoodMenu":"해물칼국수",
+      "FoodTel":"02-743-1384",
+      "FoodURL":"https://store.naver.com/restaurants/detail?entry=plt&id=11717523&query=%EC%B0%AC%EC%96%91%EC%A7%91"
+   },
+   {
+      "FoodSort":"한식",
+      "FoodName":"시골전집",
+      "FoodAddress":"서울 종로구 종로 123",
+      "FoodMenu":"콩나물밥,해물순두부",
+      "FoodTel":"",
+      "FoodURL":"https://store.naver.com/restaurants/detail?id=20735928"
+   },
+   {
+      "FoodSort":"한식",
+      "FoodName":"뚝배기집",
+      "FoodAddress":"서울 종로구 종로16길 12",
+      "FoodMenu":"순두부찌개,제육볶음",
+      "FoodTel":"02-2265-5744",
+      "FoodURL":"https://store.naver.com/restaurants/detail?entry=plt&id=11717175&query=%EB%9A%9D%EB%B0%B0%EA%B8%B0%EC%A7%91"
+   },
+   {
+      "FoodSort":"한식",
+      "FoodName":"라밥",
+      "FoodAddress":"서울 종로구 종로 116",
+      "FoodMenu":"김밥,라면,떡볶이",
+      "FoodTel":"",
+      "FoodURL":"https://store.naver.com/restaurants/detail?id=1201458226"
+   },
+   {
+      "FoodSort":"한식",
+      "FoodName":"할매순대국",
+      "FoodAddress":"서울 종로구 돈화문로9길 6",
+      "FoodMenu":"순대국",
+      "FoodTel":"02-745-9298",
+      "FoodURL":"https://store.naver.com/restaurants/detail?id=37373701"
+   },
+   {
+      "FoodSort":"한식",
+      "FoodName":"할매집",
+      "FoodAddress":"서울 종로구 돈화문로4길 5",
+      "FoodMenu":"해장국",
+      "FoodTel":"02-765-4237",
+      "FoodURL":"https://store.naver.com/restaurants/detail?entry=plt&id=20735358&query=%ED%95%A0%EB%A7%A4%EC%A7%91"
+   },
+   {
+      "FoodSort":"양식",
+      "FoodName":"맥도날드",
+      "FoodAddress":"서울 종로구 종로 115",
+      "FoodMenu":"햄버거",
+      "FoodTel":"070-7017-0434",
+      "FoodURL":"https://store.naver.com/restaurants/detail?id=18673146"
+   },
+   {
+      "FoodSort":"양식",
+      "FoodName":"버거킹",
+      "FoodAddress":"서울 종로구 종로 94",
+      "FoodMenu":"햄버거",
+      "FoodTel":"02-2285-4838",
+      "FoodURL":"https://store.naver.com/restaurants/detail?id=11782345"
+   },
+   {
+      "FoodSort":"양식",
+      "FoodName":"서브웨이",
+      "FoodAddress":"서울 종로구 삼일대로 391",
+      "FoodMenu":"샌드위치",
+      "FoodTel":"02-737-0501",
+      "FoodURL":"https://store.naver.com/restaurants/detail?id=33595482"
+   },
+   {
+      "FoodSort":"양식",
+      "FoodName":"이삭토스트",
+      "FoodAddress":"서울 종로구 수표로 98",
+      "FoodMenu":"샌드위치",
+      "FoodTel":"02-2273-8804",
+      "FoodURL":"https://store.naver.com/restaurants/detail?id=1906426107"
+   },
+   {
+      "FoodSort":"양식",
+      "FoodName":"금화왕돈까스",
+      "FoodAddress":"서울 종로구 돈화문로 15",
+      "FoodMenu":"왕돈까스,쫄면,냉면",
+      "FoodTel":"02-2272-9292",
+      "FoodURL":"https://store.naver.com/restaurants/detail?id=1901717638"
+   },
+   {
+      "FoodSort":"중식",
+      "FoodName":"래빈",
+      "FoodAddress":"서울 종로구 돈화문로 36-1",
+      "FoodMenu":"짬뽕,짜장",
+      "FoodTel":"02-764-1089",
+      "FoodURL":"https://store.naver.com/restaurants/detail?id=17932521"
+   },
+   {
+      "FoodSort":"중식",
+      "FoodName":"전설의짬뽕",
+      "FoodAddress":"서울 종로구 수표로 98",
+      "FoodMenu":"짬뽕",
+      "FoodTel":"02-2264-4409",
+      "FoodURL":"https://store.naver.com/restaurants/detail?id=1053087551"
+   },
+   {
+      "FoodSort":"일식",
+      "FoodName":"4.5평우동",
+      "FoodAddress":"서울 종로구 삼일대로30길 46",
+      "FoodMenu":"우동,카레,덮밥",
+      "FoodTel":"02-745-5051",
+      "FoodURL":"https://store.naver.com/restaurants/detail?entry=plt&id=21037817&query=4.5%ED%8F%89%EC%9A%B0%EB%8F%99%EC%A7%91"
+   },
+   {
+      "FoodSort":"일식",
+      "FoodName":"롤인익선",
+      "FoodAddress":"서울 종로구 삼일대로30길 37",
+      "FoodMenu":"연어롤,아보카도롤,메밀",
+      "FoodTel":"02-765-4560",
+      "FoodURL":"https://store.naver.com/restaurants/detail?entry=plt&id=1131121705&query=%EB%A1%A4%EC%9D%B8%EC%9D%B5%EC%84%A0"
+   },
+   {
+      "FoodSort":"일식",
+      "FoodName":"미소야",
+      "FoodAddress":"서울 종로구 종로 116-2",
+      "FoodMenu":"돈까스,우동,",
+      "FoodTel":"02-2263-7223",
+      "FoodURL":"https://store.naver.com/restaurants/detail?id=31148489"
+   },
+   {
+      "FoodSort":"일식",
+      "FoodName":"압구정하루",
+      "FoodAddress":"서울 종로구 돈화문로11나길 22-1",
+      "FoodMenu":"돈까스,메밀,알밥",
+      "FoodTel":"02-2212-4319",
+      "FoodURL":"https://store.naver.com/restaurants/detail?id=1614167255"
+   }
+]
