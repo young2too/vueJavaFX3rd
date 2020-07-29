@@ -7,9 +7,6 @@
         <div class="table-cell">
 			      <router-link :to="{name:'time',params:{name:'일식'}}"><span v-html="japanimg"></span></router-link>
         </div>
-		    <div class="table-cell">
-			      <router-link :to="{name:'time',params:{name:'중식'}}"><span v-html="chinaimg"></span></router-link>
-        </div>
       </div>
       <div class="table-row">
         <div class="table-cell-desc">
@@ -18,27 +15,18 @@
         <div class="table-cell-desc">
           {{ japanText }}
         </div>
-        <div class="table-cell-desc">
-          {{ chinaText }}
-        </div>
       </div>
 	    <div class="table-row">
         <div class="table-cell">
-			      <router-link :to="{name:'time',params:{name:'치킨'}}"><span v-html="chickenimg" ></span></router-link>
-        </div>
-        <div class="table-cell">
-            <router-link :to="{name:'time',params:{name:'피자'}}"><span v-html="pizzaimg"></span></router-link>
+			      <router-link :to="{name:'time',params:{name:'중식'}}"><span v-html="chinaimg" ></span></router-link>
         </div>
 		    <div class="table-cell">
-            <router-link :to="{name:'time',params:{name:'패스트푸드'}}"><span v-html="fastfoodimg"></span></router-link>
+            <router-link :to="{name:'time',params:{name:'양식'}}"><span v-html="fastfoodimg"></span></router-link>
         </div>
       </div>
       <div class="table-row">
         <div class="table-cell-desc">
-          {{ chickenText }}
-        </div>
-        <div class="table-cell-desc">
-          {{ pizzaText }}
+          {{ chinaText }}
         </div>
         <div class="table-cell-desc">
           {{ fastfoodText }}
@@ -51,8 +39,6 @@
 var imgpath = ['../src/assets/menu_img/kor.PNG',
 '../src/assets/menu_Img/jap.PNG',
 '../src/assets/menu_Img/china.PNG',
-'../src/assets/menu_Img/chicken.PNG',
-'../src/assets/menu_Img/pizza.PNG',
 '../src/assets/menu_Img/fastfood.PNG']
 
 export default {
@@ -62,15 +48,11 @@ export default {
       koreanimg:'<img src="'+imgpath[0]+'">',
       japanimg:'<img src='+imgpath[1]+'>',
       chinaimg:'<img src='+imgpath[2]+'>',
-      chickenimg:'<img src='+imgpath[3]+'>',
-      pizzaimg:'<img src='+imgpath[4]+'>',
-      fastfoodimg:'<img src='+imgpath[5]+'>',
+      fastfoodimg:'<img src='+imgpath[3]+'>',
 
       koreanText:'한식',
       japanText:'일식',
       chinaText:'중식',
-      chickenText:'치킨',
-      pizzaText:'피자',
       fastfoodText:'패스트푸드',
     }
   },
