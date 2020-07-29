@@ -21,7 +21,7 @@
 			      <router-link :to="{name:'time',params:{name:'중식'}}"><span v-html="chinaimg" ></span></router-link>
         </div>
 		    <div class="table-cell">
-            <router-link :to="{name:'time',params:{name:'양식'}}"><span v-html="fastfoodimg"></span></router-link>
+            <router-link :to="{name:'time',params:{name:'패스트푸드'}}"><span v-html="fastfoodimg"></span></router-link>
         </div>
       </div>
       <div class="table-row">
@@ -37,10 +37,9 @@
 
 <script>
 var imgpath = ['../src/assets/menu_img/kor.PNG',
-'../src/assets/menu_Img/jap.PNG',
+'../src/assets/menu_Img/japan.PNG',
 '../src/assets/menu_Img/china.PNG',
 '../src/assets/menu_Img/fastfood.PNG']
-
 export default {
   name: 'table',
   data () {
@@ -49,7 +48,6 @@ export default {
       japanimg:'<img src='+imgpath[1]+'>',
       chinaimg:'<img src='+imgpath[2]+'>',
       fastfoodimg:'<img src='+imgpath[3]+'>',
-
       koreanText:'한식',
       japanText:'일식',
       chinaText:'중식',
@@ -60,13 +58,11 @@ export default {
 </script>
 
 <style>
-
 img{
-  width:100px;
-  height:100px;
+  width:180px;
+  height:180px;
   
 }
-
 .imbtb {
   display: table;
 }
@@ -86,17 +82,15 @@ img{
   text-align:center;
   font-weight:bold;
 }
-
 .middle {
   vertical-align: middle;
 }
 .bottom {
   vertical-align: bottom;
 }
-
-img:hover{
+/* img:hover{
   transform:scale(2.0);
   transition : all ease 1s;
   cursor: pointer;
-}
+} */
 </style>
