@@ -8,7 +8,7 @@ import resultPage from './pages/resultPage';
 Vue.config.productionTip = false
 
 Vue.use(VueRouter); // router 기능 확장 선언
-
+//
 const routes = [{
     path:'/',
 	component:App,
