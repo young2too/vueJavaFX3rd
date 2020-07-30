@@ -3,23 +3,20 @@
 		<VueHeader></VueHeader>
 		<div class='formWrapper'>
 			<div class='selectedInfo'>
-				<!-- 앞 페이지에서 선택한 장르가 넘어오게 되어있음 -->
-				<!-- 이곳을 꾸미면 될듯 -->
-				{{ name }} 선택하셨습니다
-				<backBtn></backBtn>
-			</div>
-			<div class='inputform'>
-				{{ timeDescText }}<input type="number" v-model="takeTime" placeholder="왕복시간 입력"> 분<br>
-				<router-link :to="{name:'result',params:{name:this.name,time:this.takeTime}}"><button @click="nextPage">입력</button></router-link>
-				
+				<kakaomap></kakaomap>
+				<sideList v-bind:sort="name"></sideList>
 			</div>
 		</div>
+		<VueFooter></VueFooter>
 	</div>
 </template>
 
 <script>
 import VueHeader from '../components/Header.vue';
 import backBtn from '../components/backBtn.vue';
+import VueFooter from '../components/footer.vue';
+import kakaomap from '../components/map/kakaomap-container.vue';
+import sideList from '../components/sideList.vue';
 
 export default {
 	name:'params',
@@ -29,15 +26,12 @@ export default {
 			default:''
 		}
 	},
-  	data () {
-		return{
-			takeTime:null,
-		  	timeDescText:'왕복시간 입력 ',
-	 	}
- 	 },
   	components:{
 		'VueHeader':VueHeader,
-		'backBtn':backBtn
+		'backBtn':backBtn,
+		'kakaomap':kakaomap,
+		'sideList':sideList,
+		'VueFooter':VueFooter
   	},
   	methods:{
 	  nextPage(){
@@ -51,13 +45,9 @@ export default {
 <style scoped>
 #timeInput{
   position:absolute;
-  left:50%;
-  width: 200px;
-  margin : 0;
-  padding :0;
-  width: 50%;
-  height : 50%;
-  margin-left:-100px;
+  margin:auto;
+  margin-left:auto;
+  width:70%;
   text-align:center;
 }
 .formWrapper{
