@@ -4,16 +4,19 @@
 		<backBtn></backBtn>
 		{{ $route.params.name }}선택한 것
 		{{ $route.params.time }}시간임
+		<VueFooter></VueFooter>
 	</div>	
 </template>
 
 <script>
 import VueHeader from '../components/Header.vue';
 import backBtn from '../components/backBtn.vue';
+import VueFooter from '../components/footer.vue';
 export default {
 	components:{
 		'VueHeader':VueHeader,
-		'backBtn':backBtn
+		'backBtn':backBtn,
+		'VueFooter':VueFooter
   	},
 }
 </script>
@@ -22,13 +25,11 @@ export default {
 
 .resultContainer{
 	position:absolute;
-  	left:50%;
   	width: 200px;
   	margin : 0;
   	padding :0;
-  	width: 50%;
-  	height : 50%;
-  	margin-left:-100px;
+	width: 100%;
+	height : 50%;
   	text-align:center;
 }
 

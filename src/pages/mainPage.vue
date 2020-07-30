@@ -2,17 +2,20 @@
   <div id="main">
     <VueHeader></VueHeader>
     <VueTable></VueTable>
+    <VueFooter></VueFooter>
   </div>
 </template>
 
 <script>
 import VueTable from '../components/table.vue';
 import VueHeader from '../components/Header.vue';
+import VueFooter from '../components/footer.vue';
 
 export default {
   components:{
     'VueTable':VueTable,
-	'VueHeader':VueHeader,
+    'VueHeader':VueHeader,
+    'VueFooter':VueFooter
   }
 }
 
@@ -22,13 +25,11 @@ export default {
 #main{
 	display:inline-block;
   position:absolute;
-  left:50%;
-  width: 200px;
-  margin : 0;
   padding :0;
-  width: 50%;
+  width: 100%;
   height : 50%;
-  margin-left:-100px;
+  margin: 0 auto;
   text-align:center;
+  
 }
 </style>
