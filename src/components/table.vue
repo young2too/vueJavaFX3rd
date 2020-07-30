@@ -1,4 +1,5 @@
 <template>
+<table>
   	<div class="imgtb">
       <div class="table-row">
         <div class="table-cell">
@@ -33,6 +34,7 @@
         </div>
       </div>
     </div>
+    </table>
 </template>
 
 <script>
@@ -63,10 +65,12 @@ methods:{
 </script>
 
 <style>
+table {
+  border-spacing: 20px 5px;
+      }
 img{
   width:180px;
   height:180px;
-  
 }
 .imbtb {
   display: table;
@@ -77,15 +81,17 @@ img{
 .table-cell{
   border : 1px solid black;
   display: table-cell;
-  padding : 5px;
+  padding : 1px;
   text-align:center;
+  border-radius: 5px;
 }
 .table-cell-desc{
   border : none;
   display: table-cell;
   padding : 5px;
   text-align:center;
-  font-weight:bold;
+  font-family: Juaaa;
+  font-weight: bold;
 }
 .middle {
   vertical-align: middle;
@@ -93,7 +99,7 @@ img{
 .bottom {
   vertical-align: bottom;
 }
-/* img:hover{
+ /* img:hover{
   transform:scale(2.0);
   transition : all ease 1s;
   cursor: pointer;
