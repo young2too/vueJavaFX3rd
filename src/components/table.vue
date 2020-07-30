@@ -2,10 +2,10 @@
   	<div class="imgtb">
       <div class="table-row">
         <div class="table-cell">
-			      <router-link :to="{name:'time',params:{name:'한식'}}"><span v-html="koreanimg"></span></router-link>
+			      <router-link :to="{name:'time',params:{name:'한식'}}"><span v-html="koreanimg" v-on:click="savesort('한식')"></span></router-link>
         </div>
         <div class="table-cell">
-			      <router-link :to="{name:'time',params:{name:'일식'}}"><span v-html="japanimg"></span></router-link>
+			      <router-link :to="{name:'time',params:{name:'일식'}}"><span v-html="japanimg" v-on:click="savesort('일식')"></span></router-link>
         </div>
       </div>
       <div class="table-row">
@@ -18,10 +18,10 @@
       </div>
 	    <div class="table-row">
         <div class="table-cell">
-			      <router-link :to="{name:'time',params:{name:'중식'}}"><span v-html="chinaimg" ></span></router-link>
+			      <router-link :to="{name:'time',params:{name:'중식'}}"><span v-html="chinaimg" v-on:click="savesort('중식')"></span></router-link>
         </div>
 		    <div class="table-cell">
-            <router-link :to="{name:'time',params:{name:'패스트푸드'}}"><span v-html="fastfoodimg"></span></router-link>
+            <router-link :to="{name:'time',params:{name:'양식'}}"><span v-html="fastfoodimg" v-on:click="savesort('양식')"></span></router-link>
         </div>
       </div>
       <div class="table-row">
@@ -51,9 +51,14 @@ export default {
       koreanText:'한식',
       japanText:'일식',
       chinaText:'중식',
-      fastfoodText:'패스트푸드',
+      fastfoodText:'양식',
     }
   },
+methods:{
+  savesort(){
+    localStorage.setItem('sort', value);
+  }
+}
 }
 </script>
 
