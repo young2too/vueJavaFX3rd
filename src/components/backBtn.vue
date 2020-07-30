@@ -26,7 +26,7 @@ export default {
 }
 
 #backBtnWrapper{
-	display:inline;
+	display: inline;
 	margin:0;
 	padding:0;
 }
