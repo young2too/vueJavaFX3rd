@@ -1,6 +1,6 @@
 <template>
 	<div id="backBtnWrapper">
-		<img id="backImg" src='../assets/menu_img/back.png' v-on:click="backward">
+		<i class="fa fa-arrow-left" aria-hidden="true" style='cursor:pointer;' v-on:click="backward"></i>
 	</div>
 </template>
 
@@ -8,7 +8,8 @@
 export default {
 	methods:{
 		backward(event) {
-    		history.back();
+			history.back();
+			console.log("뒤로가기");
 		}
 	}
 }
