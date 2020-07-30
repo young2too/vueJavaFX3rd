@@ -1,15 +1,25 @@
 <template>
 	<div class="headerWrapper">
 		<div class="header">
-			<h1>아이티뱅크 저녁식사 추천</h1>
-			<!-- 헤더도 잘 꾸미면 좋을것 같고 -->
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+			<h1>
+				<KGImg></KGImg>
+				아이티뱅크 저녁식사 추천
+				<backImg></backImg>
+			</h1>
 		</div>
 	</div>	
 </template>
 
 <script>
+import KGImg from '../components/KGBtn.vue';
+import backImg from '../components/backBtn.vue';
+
 export default {
-	
+	components:{
+	'KGImg':KGImg,
+	'backImg':backImg
+  }
 }
 </script>
 
@@ -19,7 +29,6 @@ export default {
 	display:block;
 	text-align: left;
 }
-
 h1, h2 {
   font-weight: normal;
 }
