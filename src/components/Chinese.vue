@@ -44,7 +44,7 @@ export default {
 
 #chinese{
   display:inline-block;
-  position: relative;
+  position: absolute;
   padding-left:15%;
   margin-left: 300px;
   height: 800px;

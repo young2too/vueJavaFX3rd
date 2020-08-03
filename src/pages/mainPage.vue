@@ -9,7 +9,7 @@
     <section>
       <JapanVue></JapanVue>
     </section>
-    <section>
+    <section style="background-color: rgb(217, 61, 74);">
       <ChinaVue></ChinaVue>
     </section>
     <section>
@@ -61,5 +61,8 @@ body{
   scroll-snap-align:start;
   -ms-scroll-snap-coordinate:0 0;
 }
+
+
+
 
 </style>

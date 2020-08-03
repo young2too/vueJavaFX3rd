@@ -55,7 +55,7 @@ export default {
 	#thomas{
 		position :absolute;
 		bottom: 0px;
-		right: 300px; 
+		right: 20%; 
 		width: auto; height: auto;
    		max-width: 1000px;
     	max-height: 900px;
@@ -63,8 +63,8 @@ export default {
 	}
 	/*이미지 애니메이션 */
 	@keyframes thomas{ 
-   		from{right:-400px;}
-   		to{right:300px}	
+   		from{right:-40%;}
+   		to{right:20%}	
 	}
 
 </style>

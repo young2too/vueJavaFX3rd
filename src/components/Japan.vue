@@ -74,7 +74,7 @@
 
 <style scoped>
 .font{
-	position:fixed;
+	position:absolute;
 	margin-top:20px;
 	margin-left:350px;
 	background-position: left;
@@ -91,7 +91,7 @@
 	margin-left:100px;
 }
 .ramenWrap{
-	position: fixed;
+	position: absolute;
 	margin-top:10%;
 	margin-left:30%;
 	z-index: 3;
@@ -124,19 +124,19 @@
 	margin-top:-42%;
 }
 .flower{
-	position:fixed;
+	position:absolute;
 	margin-left:0;
 	margin-top:0;
 	z-index: 2;
 }
 .flowerRight{
-	position:fixed;
+	position:absolute;
 	right:0;
 	bottom:0;
 	z-index: 3;
 }
 .sushi{
-	position:fixed;
+	position:absolute;
 	margin-top:300px;
 	margin-left:600px;
 	opacity:0.7;

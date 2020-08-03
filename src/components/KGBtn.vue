@@ -1,6 +1,6 @@
 <template>
 	<div id="KGBtnWrapper">
-		<router-link to="/"><img id="KGImg" src='../assets/menu_img/logo.png' v-on:click="gohome"></router-link>
+		<router-link to="/"><img id="KGImg" src='../assets/menu_img/kg.png' v-on:click="gohome"></router-link>
 	</div>
 </template>
 
