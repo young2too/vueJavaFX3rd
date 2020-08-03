@@ -52,7 +52,8 @@ export default {
 		// 검색 결과 목록이나 마커를 클릭했을 때 장소명을 표출할 인포윈도우를 생성합니다
 		var infowindow = new kakao.maps.InfoWindow({zIndex:1});
 		displayPlaces();
-
+		map.setBounds(bounds);
+		map.relayout();
 // 키워드로 장소를 검색합니다
 // searchPlaces();
 
@@ -171,8 +172,9 @@ export default {
     	// listEl.appendChild(fragment);
 		// menuEl.scrollTop = 0;
 
-    	// 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
-    	map.setBounds(bounds);
+		// 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
+		
+		
 	}
 
 // 검색결과 항목을 Element로 반환하는 함수입니다
@@ -296,7 +298,7 @@ export default {
  <style>
 .map_wrap, .map_wrap * {margin:0;padding:0;font-family:'Malgun Gothic',dotum,'돋움',sans-serif;font-size:12px;}
 .map_wrap a, .map_wrap a:hover, .map_wrap a:active{color:#000;text-decoration: none;}
-.map_wrap {position:relative;width:100%;height:500px;}
+.map_wrap {position:relative;width:100vh;height:500px;}
 #menu_wrap {position:absolute;top:0;left:0;bottom:0;width:250px;margin:10px 0 30px 10px;padding:5px;overflow-y:auto;background:rgba(255, 255, 255, 0.7);z-index: 1;font-size:12px;border-radius: 10px;}
 .bg_white {background:#fff;}
 #menu_wrap hr {display: block; height: 1px;border: 0; border-top: 2px solid #5F5F5F;margin:3px 0;}
