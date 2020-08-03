@@ -12,8 +12,7 @@
 
 <script>
 export default {
-	data(){
-	},
+
 	methods: {
 	}
 }
