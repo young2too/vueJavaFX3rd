@@ -3,8 +3,8 @@
 		<VueHeader></VueHeader>
 		<div class='formWrapper'>
 			<div class='selectedInfo'>
-				<kakaomap></kakaomap>
-				<sideList v-bind:sort="name"></sideList>
+				<kakaomap2></kakaomap2>
+				<!-- <sideList v-bind:sort="name"></sideList> -->
 			</div>
 		</div>
 		<VueFooter></VueFooter>
@@ -12,6 +12,8 @@
 </template>
 
 <script>
+
+import kakaomap2 from '../components/map/kakaomap2.vue';
 import VueHeader from '../components/Header.vue';
 import backBtn from '../components/backBtn.vue';
 import VueFooter from '../components/footer.vue';
@@ -31,7 +33,8 @@ export default {
 		'backBtn':backBtn,
 		'kakaomap':kakaomap,
 		'sideList':sideList,
-		'VueFooter':VueFooter
+		'VueFooter':VueFooter,
+		'kakaomap2':kakaomap2
   	},
   	methods:{
 	  nextPage(){
