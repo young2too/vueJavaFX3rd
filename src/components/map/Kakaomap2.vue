@@ -1,8 +1,7 @@
 <template>
 	<div class="map_wrap">
     <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div>
-
-    <div id="menu_wrap" class="bg_white">
+    	<div id="menu_wrap" class="bg_white">
         <!-- <div class="option">
            	<div>
                 <form onsubmit="searchPlaces(); return false;">
@@ -13,16 +12,32 @@
 			<hr> 
         <ul id="placesList"></ul>
         </div>
+		<div class="modalWrap">
+		<modal v-show="showModal" v-on:close="showModal=false">
+    		<h3 id="modalHeader" slot="header">123</h3>
+    		<div id="modalBody" slot="body">12123!</div>	
+  		</modal>
+		</div>
     </div>
 </template>
 
 <script>
 import shopList from "../../FoodData.json";
+import modal from '../../components/common/Modal.vue';
 
 export default {
+	data(){
+		return{
+			showModal:false
+		}
+	},
+	components:{
+		'modal':modal
+	},
 	mounted() {
-        if (window.kakao && window.kakao.maps) {
-            this.initMap();
+		this.$nextTick(function(){
+			if (window.kakao && window.kakao.maps) {
+            this.initMap(this.$el);
         } else {
             const script = document.createElement('script');
 			/* global kakao */
@@ -31,12 +46,11 @@ export default {
             
             document.head.appendChild(script);
         }
+		})  
 	},
 	methods:{
 		initMap(){
-			// 마커를 담을 배열입니다
 		var markers = [];
-
 		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     		mapOption = {
         	center: new kakao.maps.LatLng(37.571121, 126.992473), // 지도의 중심좌표
@@ -48,12 +62,13 @@ export default {
 
 		// 장소 검색 객체를 생성합니다
 		var ps = new kakao.maps.services.Places();  
-
+		var kgitbank = new kakao.maps.LatLng(37.570894,126.992528);
 		// 검색 결과 목록이나 마커를 클릭했을 때 장소명을 표출할 인포윈도우를 생성합니다
 		var infowindow = new kakao.maps.InfoWindow({zIndex:1});
-		displayPlaces();
-		map.setBounds(bounds);
-		map.relayout();
+
+		displayPlaces(this);
+		//map.setBounds(bounds);
+		map.setCenter(kgitbank);
 // 키워드로 장소를 검색합니다
 // searchPlaces();
 
@@ -96,7 +111,8 @@ export default {
 // }
 
 // 검색 결과 목록과 마커를 표출하는 함수입니다
-	function displayPlaces() {
+	function displayPlaces(vueCompo) {
+
 	var nameList = [];//이름저장
 	var addressList = [];//주소저장
 	var printList = [];//전체저장
@@ -112,7 +128,7 @@ export default {
     var listEl = document.getElementById('placesList'), 
     menuEl = document.getElementById('menu_wrap'),
     fragment = document.createDocumentFragment(), 
-	bounds = new kakao.maps.LatLngBounds(),
+	//bounds = new kakao.maps.LatLngBounds(),
 	liststr='';
     
     // 검색 결과 목록에 추가된 항목들을 제거합니다
@@ -125,19 +141,19 @@ export default {
 	// console.log(printList);
 	// 이 3개 콘솔 로그는 제대로 나왔음
 	
-    var printCount = 0;
+	var printCount = 0;
     for ( var i=0; i<addressList.length; i++ ) {
 		geocoder.addressSearch(addressList[i],function(result,status){
 			// 마커를 생성하고 지도에 표시합니다
 			if (status === kakao.maps.services.Status.OK) {
         		var placePosition = new kakao.maps.LatLng(result[0].y, result[0].x);
-				var marker = addMarker(placePosition, i, printList[printCount].FoodName); 
+				var marker = addMarker(placePosition, printCount, printList[printCount].FoodName, map); 
             	var itemEl = getListItem(printCount, printList[printCount]); // 검색 결과 항목 Element를 생성합니다
 				printCount++;
        			// 검색된 장소 위치를 기준으로 지도 범위를 재설정하기위해
 				// LatLngBounds 객체에 좌표를 추가합니다
 				
-        		bounds.extend(placePosition);
+        		//bounds.extend(placePosition);
         		// 마커와 검색결과 항목에 mouseover 했을때
         		// 해당 장소에 인포윈도우에 장소명을 표시합니다
 				// mouseout 했을 때는 인포윈도우를 닫습니다
@@ -147,23 +163,40 @@ export default {
 				array.push(placePosition);
 				var distance=getDistanceFromLatLonInKm(array);
 
-        		(function(marker1, title1) {
+        		(function(marker1, title1, distance1, shopInfo1) {
             		kakao.maps.event.addListener(marker1, 'mouseover', function() {
-                		displayInfowindow(marker1, title);
-            		});
-
+                		displayInfowindow(marker1, title,distance1);
+					});
+					
             		kakao.maps.event.addListener(marker1, 'mouseout', function() {
              		   infowindow.close();
             		});
 
             		itemEl.addEventListener("mouseover", function () {
-            	 	   displayInfowindow(marker1, title1);
+            	 	   displayInfowindow(marker1, title1,distance1);
             		});
+					itemEl.addEventListener("click", function(){
+						var context = '';
+						var headerEl = document.getElementById('modalHeader');
+						var contextEl = document.getElementById('modalBody');
+
+						
+						context += '이름 : '+shopInfo1.FoodName +'<br>';
+						context += '주소 : '+shopInfo1.FoodAddress +'<br>';
+						context += '메뉴 : '+shopInfo1.FoodMenu +'<br>';
+						context += '전화 : '+shopInfo1.FoodTel +'<br>';
+						context += '거리 : '+distance1+'m<br>';
+						context += '<a href="'+shopInfo1.FoodURL+'">'+shopInfo1.FoodURL+'</a>';
+						
+						headerEl.innerHTML = title1;
+						contextEl.innerHTML = context;
+						vueCompo.showModal = true;
+					});
 
             		itemEl.addEventListener("mouseout", function () {
                 		infowindow.close();
 					});
-        		})(marker, printList[printCount-1].FoodName);
+        		})(marker, printList[printCount-1].FoodName,distance, printList[printCount-1]);
 				listEl.appendChild(itemEl);
 				}
 			});
@@ -174,9 +207,7 @@ export default {
 
 		// 검색된 장소 위치를 기준으로 지도 범위를 재설정합니다
 		
-		
 	}
-
 // 검색결과 항목을 Element로 반환하는 함수입니다
 	function getListItem(index, shopList) {
 
@@ -202,7 +233,7 @@ export default {
 	}
 
 	// 마커를 생성하고 지도 위에 마커를 표시하는 함수입니다
-	function addMarker(position, idx, title) {
+	function addMarker(position, idx, title, map) {
     	var imageSrc = 'https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/marker_number_blue.png', // 마커 이미지 url, 스프라이트 이미지를 씁니다
         	imageSize = new kakao.maps.Size(36, 37),  // 마커 이미지의 크기
         	imgOptions =  {
@@ -214,7 +245,7 @@ export default {
             	marker = new kakao.maps.Marker({
             	position: position, // 마커의 위치
             	image: markerImage 
-        	});
+			});
     	marker.setMap(map); // 지도 위에 마커를 표출합니다
 		markers.push(marker);  // 배열에 생성된 마커를 추가합니다
 		return marker;
@@ -228,40 +259,10 @@ export default {
     	markers = [];
 	}
 
-	// // 검색결과 목록 하단에 페이지번호를 표시는 함수입니다
-	// function displayPagination(pagination) {
-    // 	var paginationEl = document.getElementById('pagination'),
-    //     	fragment = document.createDocumentFragment(),
-    //     	i; 
-
-    // 	// 기존에 추가된 페이지번호를 삭제합니다
-    // 	while (paginationEl.hasChildNodes()) {
-    //     	paginationEl.removeChild (paginationEl.lastChild);
-    // 	}
-
-    // 	for (i=1; i<=pagination.last; i++) {
-    //     	var el = document.createElement('a');
-    //     	el.href = "#";
-    //     	el.innerHTML = i;
-
-    //     	if (i===pagination.current) {
-    //         	el.className = 'on';
-    //     	} else {
-    //         	el.onclick = (function(i) {
-    //             	return function() {
-    //                 	pagination.gotoPage(i);
-    //             	}
-    //         	})(i);
-    //     	}
-    //     	fragment.appendChild(el);
-    // 	}
-    // 	paginationEl.appendChild(fragment);
-	// }
-
 	// 검색결과 목록 또는 마커를 클릭했을 때 호출되는 함수입니다
 	// 인포윈도우에 장소명을 표시합니다
-	function displayInfowindow(marker, title) {
-    	var content = '<div style="padding:5px;z-index:1;">' + title + '</div>';
+	function displayInfowindow(marker, title,distance) {
+    	var content = '<div style="padding:5px;z-index:1;text-align:center;">' + title +' '+distance+'m</div>';
 
     	infowindow.setContent(content);
     	infowindow.open(map, marker);
@@ -290,6 +291,7 @@ export default {
         	el.removeChild (el.lastChild);
     			}
 			}
+			map.relayout();
 		}
 	}
 }
@@ -298,8 +300,8 @@ export default {
  <style>
 .map_wrap, .map_wrap * {margin:0;padding:0;font-family:'Malgun Gothic',dotum,'돋움',sans-serif;font-size:12px;}
 .map_wrap a, .map_wrap a:hover, .map_wrap a:active{color:#000;text-decoration: none;}
-.map_wrap {position:relative;width:100vh;height:500px;}
-#menu_wrap {position:absolute;top:0;left:0;bottom:0;width:250px;margin:10px 0 30px 10px;padding:5px;overflow-y:auto;background:rgba(255, 255, 255, 0.7);z-index: 1;font-size:12px;border-radius: 10px;}
+.map_wrap {position:relative;width:130vh;height:80vh;margin-left:15%;}
+#menu_wrap {position:absolute;top:0;left:0;bottom:0;width:250px;margin:10px 0 30px 10px;padding:5px;overflow-y:auto;background:rgba(255,255,255,0.3);z-index: 1;font-size:12px;border-radius: 10px;margin-left:130vh}
 .bg_white {background:#fff;}
 #menu_wrap hr {display: block; height: 1px;border: 0; border-top: 2px solid #5F5F5F;margin:3px 0;}
 #menu_wrap .option{text-align: center;}
