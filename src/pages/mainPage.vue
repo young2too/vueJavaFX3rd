@@ -25,6 +25,9 @@
         </div>
       </div>
     </full-page>
+    <div class="fixedUp">
+      <VueUp></VueUp>
+    </div>
   </div>
 </template>
 
@@ -36,6 +39,7 @@ import ChinaVue from '../components/Chinese.vue';
 import AmericaVue from '../components/America.vue';
 import FooterVue from '../components/footer.vue';
 import VueHeader from '../components/Header.vue';
+import VueUp from '../components/up.vue';
 
 export default {
   data(){
@@ -51,7 +55,8 @@ export default {
     'ChinaVue':ChinaVue,
     'AmericaVue':AmericaVue,
     'FooterVue':FooterVue,
-    'VueHeader':VueHeader
+    'VueHeader':VueHeader,
+    'VueUp':VueUp
   }
 }
 
@@ -72,5 +77,12 @@ body{
   position:fixed;
   top:0px;
   z-index:500;
+  margin-left:300px;
+}
+
+.fixedUp{
+  position:fixed;
+  bottom:10px;
+  right:10px;
 }
 </style>
