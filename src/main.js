@@ -4,11 +4,14 @@ import mainPage from './pages/mainPage';
 import VueRouter from 'vue-router';
 import timePage from './pages/timePage';
 import resultPage from './pages/resultPage';
+import 'fullpage.js/vendors/scrolloverflow'  
+import VueFullPage from 'vue-fullpage.js';
+
 
 Vue.config.productionTip = false
-
 Vue.use(VueRouter); // router 기능 확장 선언
-//
+Vue.use(VueFullPage); //fullpage 기능확장 선언
+
 const routes = [{
     path:'/',
 	component:App,
@@ -37,7 +40,15 @@ const router = new VueRouter({
 });
 
 new Vue({
-  	el: '#app',
+	el: '#app',
+	data () { 
+    	return{ 
+      		options : { 
+			navigation: true,
+			navigationPosition: 'right',
+			}
+		}
+	},
   	render: h => h(App),
 	router
 }).$mount('#app')
