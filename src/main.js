@@ -3,7 +3,6 @@ import App from './App';
 import mainPage from './pages/mainPage';
 import VueRouter from 'vue-router';
 import timePage from './pages/timePage';
-import resultPage from './pages/resultPage';
 import 'fullpage.js/vendors/scrolloverflow'  
 import VueFullPage from 'vue-fullpage.js';
 
@@ -25,11 +24,6 @@ const routes = [{
 			name:'time',
 			component:timePage,
 			props:true,
-		},
-		{
-			path:'resultPage',
-			name:'result',
-			component:resultPage
 		}
 	],
 }];
