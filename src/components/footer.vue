@@ -86,8 +86,8 @@ export default {
 	bottom: 0px;
 	width:100%;
 	height:230px;
-	margin-top: 150px;
-	margin-left: 200px;
+	padding-top: 10%;
+	margin-left: 20%;
 
 /* 	padding: 20px;
 	background-color: rgba(4, 157, 191, 0.5);
