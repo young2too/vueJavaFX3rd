@@ -55,7 +55,7 @@ export default {
 }
 
 .modal-container {
-  width: 50%;
+  width: 30%;
   margin: 0px auto;
   padding: 20px 30px;
   background-color: #fff;
@@ -75,14 +75,13 @@ export default {
 }
 
 .modal-default-button {
+	width:15%;
   float: right;
 }
 
-a{
-	cursor:pointer;
-}
-
+.modal-default-button:hover,
 a:hover{
+	cursor:pointer;
 	color:purple;
 }
 
