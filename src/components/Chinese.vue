@@ -1,55 +1,45 @@
 <template>
-<!-- 중식 메인화면  -->
-	<div id="chinese">
-	<div id="wow">
-	<!-- 	<button id="Btn">
-			<img src= onmouseover="this.src='../assets/footerImg/yesbtn.png'" onmouseout="this.src='../assets/footerImg/noBtn.png'">
-		</button> -->
+   <div class="china">
+      <img id="chaImg" src="../assets/footerImg/chinese1.png" >
+		<a class="Btn" href="#">
+			<img src="../assets/footerImg/noBtn.png" />
+			<img src="../assets/footerImg/yesbtn.png" />
+   		</a>
 
-	<a class="Btn" href="#">
+      <!-- <a class="Btn" href="#">
         <img src="../assets/footerImg/noBtn.png" />
         <img src="../assets/footerImg/yesbtn.png" />
-    </a>
-			<h1></h1>
-			<!-- 헤더도 잘 꾸미면 좋을것 같고 -->
-		
+    	</a> -->
 
-	
-	</div>	
-	</div>
+   </div>
 </template>
 
 <script>
 export default {
-	
+   data(){
+   },
+   methods: {
+   }
 }
 </script>
 
 <style scoped>
-#wow{
- 	padding-top: 500px;
-	padding-left: 600px; 
 
+.china{
+   background-color: rgb(217, 61, 74);
+   position: absolute;
+   width:100%;
+   height:100%;
 }
-/* #Btn{
-	width:300px;
-	height:200px;
-	background-color:transparent;  
-	border:0px transparent solid;
 
-} */
+#chaImg{
+   width:900px;
+   height:700px;
+   margin-left:200px;
+}
+
 .Btn img:last-child{display:none}
 .Btn:hover img:first-child{display:none}
 .Btn:hover img:last-child{display:inline-block}
-
-#chinese{
-  display:inline-block;
-  position: absolute;
-  padding-left:15%;
-  margin-left: 300px;
-  height: 800px;
-  background-image: url("../assets/footerImg/chinese1.png");
-  background-repeat: no-repeat;
-}
 
 </style>
