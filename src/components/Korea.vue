@@ -1,6 +1,6 @@
 <template>
 	<div class="Korea">
-    	<h1> 아름다운   <br> 밥이에요~ </h1>
+    	<p>아름다운 <br>밥이에요~</p>
 		<img id="riceImg" src="../assets/menu_Img/rice123.png">
 	</div>
 </template>
@@ -26,20 +26,21 @@ export default {
 
 
 #riceImg{
-	max-width: 100%;
-	padding-left: 81.75%;
-	margin-bottom: 30%;
-	position :absolute;
-	width: 350px;
-	height: 380px;
-	margin: 0%;
+		position :absolute;
+		bottom: 1rem;
+		right: 0; 
+		width: auto; height: auto;
+   		max-width: 35rem;
+    	max-height: 35rem;
+		
 }
 
-	h1 { 
-	font-size: 130px;
+	p { 
+	font-size: 9rem;
 	color : white;
-	font-family: Georgia, serif;
-	margin-top: 200px;
-	margin-left: 200px;
+	font-family: 'BMHANNAPro';
+	margin-top: 13%;
+	margin-left: 10%;
+	line-height: 10rem;
 }
 </style> 

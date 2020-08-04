@@ -4,6 +4,7 @@
 			<!-- 글자 -->
 			<div class="font">
 				<div class="writeJapan" STYLE="writing-mode: tb-ie">
+					<strong>
 					<b>満</b><br>
 					<b>足</b><br>
 					<b>の</b><br>
@@ -12,8 +13,10 @@
 					<b>が</b><br>
 					<b>違</b><br>
 					<b>う</b>
+					</strong>
 				</div>
 				<div class="writeKorea" STYLE="writing-mode: tb-ie">
+					<strong>
 					만<br>
 					족<br>
 					의<br>
@@ -23,6 +26,7 @@
 					다<br>
 					르<br>
 					다<br>
+					</strong>
 				</div>
 			</div>
 				<!-- 새 -->
@@ -49,9 +53,9 @@
 				<div class="flower">
 					<img src="../assets/menu_Img/flower.png" style="width: 500px; height:500px ;">
 				</div>
-				<div class="sushi">
+				<!-- <div class="sushi">
 					<img src="../assets/menu_Img/sushi.png" style="width: 400px; height:400px ;">
-				</div>
+				</div> -->
 				<!-- 초밥 -->
 				<div class="flowerRight">
 					<img src="../assets/menu_Img/flowerright.png" style="width: 500px; height:750px ;">
@@ -59,11 +63,11 @@
 				<!-- 라면 -->
 				<div class="ramenWrap">
 					<div class="ramen">
-						<img src="../assets/menu_Img/ramen.png" style="width: 300px; height:300px ;">
+						<img src="../assets/menu_Img/ramen.png" style="width: 600px; height:600px ;">
 					</div>
-					<div class="smoke">
-						<img src="../assets/menu_Img/smoke.png" style="width: 100px; height:100px ;">
-					</div>
+					<!-- <div class="smoke">
+						<img src="../assets/menu_Img/smoke.png" style="width: 200px; height:200px ;">
+					</div> -->
 				</div>
 		</header>
 	</div>
@@ -74,31 +78,30 @@
 
 <style scoped>
 .font{
-	position:absolute;
-	margin-top:20px;
-	margin-left:350px;
+	position: absolute;
+	margin-top: 7%;
+	margin-left: 30%;
 	background-position: left;
 	z-index: 3;
 }
 .writeJapan{
-	font-size: 350%;
-	/* argin-left:210px; */
+	font-size: 3.9rem;
 }
 .writeKorea{
-	color:#A4A4A4;
-	font-size:280%;
-	margin-top:-400%;
+	color:white;
+	font-size:4.2rem;
+	margin-top:-418%;
 	margin-left:100px;
+	font-family: 'BMHANNAPro';
+	line-height: 110%;
 }
 .ramenWrap{
 	position: absolute;
-	margin-top:10%;
-	margin-left:30%;
 	z-index: 3;
 }
 .smoke {
-	margin-left:43%;
-	margin-top:-105%;
+	margin-left:125%;
+	margin-top:-95%;
 	animation:Smoke 0.5s steps(5,strat) infinite alternate;
 	-webkit-animation: Smoke 0.5s steps(5,start) infinite alternate;
 }
@@ -120,28 +123,28 @@
 }
 
 .ramen{
-	margin-left:25%;
-	margin-top:-42%;
+	margin-left:120%;
+	margin-top: 50%;
 }
 .flower{
 	position:absolute;
 	margin-left:0;
-	margin-top:0;
+	margin-top:10%;
 	z-index: 2;
 }
 .flowerRight{
 	position:absolute;
-	right:0;
+	right:-10%;
 	bottom:0;
 	z-index: 3;
 }
-.sushi{
-	position:absolute;
+/* .sushi{
+	position:fixed;
 	margin-top:300px;
 	margin-left:600px;
 	opacity:0.7;
 	z-index:3;
-}
+} */
 h1 {
 	margin:20px;
 	font-size: 400%;
@@ -155,16 +158,16 @@ h2{
 .intro{
 	width:100%;
 	height:100%;
-	background-color:#F8E0F1;
+	background-color:pink;
 	background-size: 100% 100%;
 	position: absolute;
 	z-index:1;
 }
-.intro .jpHeader{
+/* .intro .jpHeader{
 	margin-top:20px;
 	display:block;
 	text-align: left;
-}
+} */
 
 /*************************************************************** */
 
