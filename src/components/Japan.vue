@@ -17,7 +17,12 @@
 				</div>
 				<div class="writeKorea" STYLE="writing-mode: tb-ie">
 					<strong>
-					만<br>
+					만  	<router-link :to="{name:'time',params:{name:'일식'}}">
+							<span v-on:click="savesort('일식')">
+								<img id="JapanBtn" src="../assets/label/circleja.png" >
+							</span>
+					  	</router-link>
+					<br>
 					족<br>
 					의<br>
 					온<br>
@@ -73,8 +78,15 @@
 	</div>
 </template>
 
-
-
+<script>
+export default {
+   methods: {
+		savesort(value){
+			localStorage.setItem('sort', value);
+		}
+	}
+}
+</script>
 
 <style scoped>
 .font{
@@ -121,7 +133,15 @@
 		visibility: hidden;
 	}
 }
-
+#JapanBtn{
+	position:absolute;
+	z-index: 100;
+	width: auto; height: auto;
+   	max-width: 15rem;
+    max-height: 15rem;
+	margin-top: -25%;
+	margin-left: 260%;
+}
 .ramen{
 	margin-left:120%;
 	margin-top: 50%;

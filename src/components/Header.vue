@@ -29,21 +29,24 @@ export default {
 <style scoped>
 
 .headerWrapper{
-	display:block;
+	/* display:block; */
 	text-align: left;
 }
 .header{
 	width:100%;
-	height: 75px;
+	height: 100%;
 	padding: 1rem;
 	color: white;
 	font-weight: bold;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	
 }
 h1, h2 {
   font-weight: normal;
+  font-family: 'BMHANNAPro';
+  font-size: 3rem;
 }
 
 a {

@@ -1,26 +1,21 @@
 <template>
    <div class="china">
-      <div id="text">
-      <p id="first">니취팔러마?</p>
-      <p id="second">你吃饭了吗？</p>
-      <p id="third">밥 먹었니?
-         <img id="black" src="../assets/footerImg/black.png" />
-      </p>
-      
-      <!-- <a class="Btn" href="#">
-        <img src="../assets/footerImg/noBtn.png" />
-        <img src="../assets/footerImg/yesbtn.png" />
-    </a> -->
-    </div>
+      <img id="chaImg" src="../assets/footerImg/chinese1.png" >
+      <router-link :to="{name:'time',params:{name:'중식'}}">
+				<span v-on:click="savesort('중식')">
+					<img id="ChinaBtn" src="../assets/label/circlechi.png" >
+				</span>
+		</router-link>
    </div>
 </template>
 
 <script>
 export default {
-   data(){
-   },
    methods: {
-   }
+		savesort(value){
+			localStorage.setItem('sort', value);
+		}
+	}
 }
 </script>
 
@@ -32,46 +27,17 @@ export default {
    height:100%;
 }
 
-
-#first{
-      margin-top:200px;
-		margin-left: 200px;
-		color:white;
-		background-position:left;
-		font-size: 8rem;
-		font-family: 'BMHANNAPro';
-      text-decoration: underline;
-
-		
-	}
-#second{
-		color:white;
-		background-position:left;
-		font-size: 6rem;
-		font-family: sans-serif;
-      margin-left:200px;
-      margin-top:5px;
-
-		
-	}
-#third{
-      margin-top:5px;
-		margin-left: 200px;
-		color:white;
-		background-position:left;
-		font-size: 6rem;
-		font-family: 'BMHANNAPro';
-
-	}
-p{
-		margin: 0;
-		padding: 0;
-		line-height: 1.8ch;
-	}
-#black{
-   width:400px;
-   height:400px;
-   margin-left: 250px;
-  position:absolute;
+#chaImg{
+   margin-left:300px;
 }
+#ChinaBtn{
+	position:absolute;
+	z-index: 100;
+	width: auto; height: auto;
+   max-width: 15rem;
+   max-height: 15rem;
+	margin-top: 10%;
+	margin-left: -10%;
+}
+
 </style>

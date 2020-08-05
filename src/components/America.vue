@@ -1,17 +1,24 @@
 <template>
 	<div class="America">
 		<p id="firstWord"> Chick Chick
+			<router-link :to="{name:'time',params:{name:'양식'}}">
+				<span v-on:click="savesort('양식')">
+					<img id="AmericaBtn" src="../assets/label/circlepork.png" >
+				</span>
+			</router-link>
+		</p>
 		<p id="secondWord">Pork Pork</p>
-		<p id="thirdWord"><strong></strong>"세상에서 제일 행복한 기차"</p>
+		<p id="thirdWord">"세상에서 제일 행복한 기차"</p>
 		<img id="thomas" src="../assets/menu_Img/Thomas.png">
 	</div>
 </template>
 
 <script>
 export default {
-	data(){
-	},
 	methods: {
+		savesort(value){
+			localStorage.setItem('sort', value);
+		}
 	}
 }
 </script>
@@ -19,7 +26,7 @@ export default {
 	p{
 		margin: 0;
 		padding: 0;
-		line-height: 1.8ch;
+		line-height: 9rem;
 	}
 	.America{
 		width: 100%;
@@ -29,7 +36,7 @@ export default {
   	}
 	#firstWord{
 		margin-top: 200px;
-		margin-left: 200px;
+		margin-left: 150px;
 		color:white;
 		background-position:left;
 		font-size: 10rem;
@@ -37,21 +44,21 @@ export default {
 		
 	}
 	#secondWord{
-		margin-left:200px;
+		margin-left:150px;
 		color:white;
 		background-position:left;
 		font-size: 10rem; 
 		font-family: 'BMHANNAPro';
 	}
 	#thirdWord{
-		margin-left:200px;
+		margin-left:150px;
 		color:white;
 		background-position:left;
-		font-size:3rem;
+		font-size:3.1rem;
 		color:white;
 		letter-spacing: 8px;
 		word-spacing: 20px;
-		font-family: BMHANNAPro;
+		font-family: 'BMHANNAAir';
 	}
 	#thomas{
 		position :absolute;
@@ -67,6 +74,15 @@ export default {
    		from{right:-400px;}
    		to{right:200px}	
 	}
-	
+	#AmericaBtn{
+	position:absolute;
+	z-index: 100;
+	width: auto; height: auto;
+   	max-width: 15rem;
+    max-height: 15rem;
+	margin-top: -2%;
+	margin-left: 5%;
+}
+
 
 </style>
