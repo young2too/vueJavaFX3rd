@@ -19,7 +19,10 @@
 					<strong>
 					만  	<router-link :to="{name:'time',params:{name:'일식'}}">
 							<span v-on:click="savesort('일식')">
-								<img id="JapanBtn" src="../assets/label/circleja.png" >
+								<a class="JapanBtn" href="#">
+									<img id="off" src="../assets/label/circleja.png" />
+									<img id="on" src="../assets/label/circlejaon.png" />
+								</a>
 							</span>
 					  	</router-link>
 					<br>
@@ -133,7 +136,23 @@ export default {
 		visibility: hidden;
 	}
 }
-#JapanBtn{
+
+.JapanBtn img:last-child{display:none}
+.JapanBtn:hover img:first-child{display:none}
+.JapanBtn:hover img:last-child{display:inline-block}
+
+
+#on{
+	position:absolute;
+	z-index: 100;
+	width: auto; height: auto;
+   	max-width: 15rem;
+    max-height: 15rem;
+	margin-top: -25%;
+	margin-left: 260%;
+}
+
+#off{
 	position:absolute;
 	z-index: 100;
 	width: auto; height: auto;

@@ -3,7 +3,10 @@
 		<p id="firstWord"> Chick Chick
 			<router-link :to="{name:'time',params:{name:'양식'}}">
 				<span v-on:click="savesort('양식')">
-					<img id="AmericaBtn" src="../assets/label/circlepork.png" >
+					<a class="AmericaBtn" href="#">
+						<img id="off" src="../assets/label/circlepork.png" />
+						<img id="on" src="../assets/label/circleporkon.png" />
+					</a>
 				</span>
 			</router-link>
 		</p>
@@ -74,7 +77,7 @@ export default {
    		from{right:-400px;}
    		to{right:200px}	
 	}
-	#AmericaBtn{
+	#off{
 	position:absolute;
 	z-index: 100;
 	width: auto; height: auto;
@@ -84,5 +87,18 @@ export default {
 	margin-left: 5%;
 }
 
+#on{
+	position:absolute;
+	z-index: 100;
+	width: auto; height: auto;
+   	max-width: 15rem;
+    max-height: 15rem;
+	margin-top: -2%;
+	margin-left: 5%;
+}
+
+.AmericaBtn img:last-child{display:none}
+.AmericaBtn:hover img:first-child{display:none}
+.AmericaBtn:hover img:last-child{display:inline-block}
 
 </style>
