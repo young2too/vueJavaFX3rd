@@ -18,7 +18,7 @@ import VueHeader from '../components/Header.vue';
 import backBtn from '../components/backBtn.vue';
 import VueFooter from '../components/footer.vue';
 import kakaomap from '../components/map/kakaomap-container.vue';
-import sideList from '../components/sideList.vue';
+
 
 export default {
 	name:'params',
@@ -32,7 +32,6 @@ export default {
 		'VueHeader':VueHeader,
 		'backBtn':backBtn,
 		'kakaomap':kakaomap,
-		'sideList':sideList,
 		'VueFooter':VueFooter,
 		'kakaomap2':kakaomap2
   	},

@@ -12,13 +12,13 @@
           <KoreanVue></KoreanVue>
         </div>
         <div class="section">
-          <JapanVue></JapanVue>
+          <AmericaVue></AmericaVue>
         </div>
         <div class="section">
           <ChinaVue></ChinaVue>
         </div>
         <div class="section">
-          <AmericaVue></AmericaVue>
+          <JapanVue></JapanVue>
         </div>
         <div class="section">
           <FooterVue></FooterVue>
@@ -30,7 +30,7 @@
     </div>
   </div>
 </template>
-
+/*  */
 <script>
 import AdVue from '../components/Ad.vue';
 import KoreanVue from '../components/Korea.vue';
@@ -77,7 +77,7 @@ body{
   position:fixed;
   top:0px;
   z-index:500;
-  margin-left:300px;
+  margin-left:9.5%;
 }
 
 .fixedUp{
