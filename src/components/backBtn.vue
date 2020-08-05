@@ -1,6 +1,8 @@
 <template>
 	<div id="backBtnWrapper">
+		<div class="backarrow">
 		<i class="fa fa-arrow-left" aria-hidden="true" style='cursor:pointer;' v-on:click="backward"></i>
+		</div>
 	</div>
 </template>
 
@@ -17,19 +19,11 @@ export default {
 
 <style scoped>
 
-#backImg{
-	width:50px;
-	height:50px;
-}
-#backImg:hover{
-	transition: none;
-	transform : none;
-}
-
 #backBtnWrapper{
-	display: inline;
-	margin:0;
-	padding:0;
+	position:absolute;
+	display: inline-block;
+	margin-top:20px;
+	margin-left:20px;
 }
 
 </style>
