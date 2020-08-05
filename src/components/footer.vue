@@ -20,10 +20,6 @@
 			<li>대표메일 : <a href='mailto:abcd@naver.com'>abcd@naver.com</a></li><br>
 			<li>고객센터 : <a href='tel:010-1234-5678'>010-1234-5678</a></li><br>
 		</ul>
-
-		<div id="up">
-			<a href="/"><img id="first" src='../assets/footerImg/up.png'></a>
-		</div>
 		<div id="cupon">
 			<a href='https://pf.kakao.com/_KBMvxl'>
 			<img id="cuponImg" src='../assets/footerImg/cupon.png'>
@@ -119,10 +115,4 @@ a:hover { color: darkturquoise; font-weight: bold; text-decoration: underline; }
 
 a:active { color: white; background-color: green; }
 
-#up{
-	display:scroll;
-	position:fixed;
-	bottom:10px;
-	right:10px;
-}
 </style>
