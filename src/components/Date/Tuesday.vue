@@ -5,14 +5,13 @@
          <span id="firstWord">나서</span><br>
          <span id="secondWord">뛰쳐가고 싶은 날.</span><br>
          <span id="thirdWord">오늘 냉면 한 그릇?</span><br>
-         <!-- <span id="fourthWord">#후루룩후루룩#원샷#머리가띵#</span> -->
+         <span id="fourthWord">#후루룩후루룩#원샷#머리가띵#</span>
       </div>
    </div>
 </template>
 
 <script>
 export default {
-
    methods: {
    }
    
@@ -36,7 +35,7 @@ export default {
       color:white;
       background-position:left;
       font-family: 'BMHANNAPro';
-      letter-spacing: 3px;
+      /* letter-spacing: 3px; */
    }
    #bigWord{
       font-size: 8rem;
