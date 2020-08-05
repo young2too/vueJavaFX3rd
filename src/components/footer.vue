@@ -1,19 +1,5 @@
 <template>
 	<div id="footerWrapper">
-		<div id="Name">
-			<h2><a href="/">(주)KG아이티뱅크 식사 추천 </a></h2>
-		</div>
-		<div id="sosBtn">
-			<a href='http://www.baemin.com'>
-			<img id="sosImg" src='../assets/footerImg/sos.png'>
-			</a>
-			<a href='http://www.yogiyo.co.kr'>
-			<img id="yogi" src='../assets/footerImg/yogi.png'>
-			</a>
-			<a href='http://www.bdtong.co.kr'>
-			<img id="tong" src='../assets/footerImg/tong.png'>
-			</a>
-		</div>
 		<ul>
 			<li>개발자 : 이영기, 오혜원, 정동준, 양예주, 김준용 </li><br>
 			<li>주소 : 서울특별시 종로구 묘동 돈화문로 26 kg아이티뱅크</li><br>
@@ -41,25 +27,6 @@ export default {
 	height:200px;
 }
 
-#sosBtn{
-	margin-left: 50px;
-}
-
-#tong{
-	width:60px;
-	height:60px;
-}
-
-#yogi{
-	width:60px;
-	height:60px;
-}
-
-#sosImg{
-	width:60px;
-	height:60px;
-}
-
 #first{
 	width:60px;
 	height:60px;
@@ -69,11 +36,6 @@ export default {
 	font-family: "Juaaa";
 	src: url('../assets/footerImg/BMJUA_ttf.ttf');
 } */
-#Name{ 
-
-	font-family: "Juaaa";
-	margin-left:40px;
-}
 #footerWrapper{
 	text-align:left;
 	font-weight:bold;
@@ -82,7 +44,7 @@ export default {
 	bottom: 0px;
 	width:100%;
 	height:230px;
-	padding-top: 10%;
+	padding-top: 20%;
 	margin-left: 20%;
 
 /* 	padding: 20px;
