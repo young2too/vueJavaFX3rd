@@ -18,7 +18,7 @@
 
           <div class="modal-footer">
             <slot name="footer">
-				<a @click="$emit('close')">확인하고 닫기</a>
+				<!-- <a @click="$emit('close')">확인하고 닫기</a> -->
               <button class="modal-default-button" @click="$emit('close')">
                 OK
               </button>
@@ -55,9 +55,9 @@ export default {
 }
 
 .modal-container {
-  width: 30%;
+  width: 40%;
   margin: 0px auto;
-  padding: 20px 30px;
+  padding: 30px 40px;
   background-color: #fff;
   border-radius: 2px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
