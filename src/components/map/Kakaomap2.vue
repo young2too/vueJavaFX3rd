@@ -186,7 +186,7 @@ export default {
 						context += '메뉴 : '+shopInfo1.FoodMenu +'<br>';
 						context += '전화 : '+shopInfo1.FoodTel +'<br>';
 						context += '거리 : '+distance1+'m<br>';
-						context += '<a href="'+shopInfo1.FoodURL+'">'+shopInfo1.FoodURL+'</a>';
+						context += '<a id="shopURL" href="'+shopInfo1.FoodURL+'">'+shopInfo1.FoodURL+'</a>';
 						
 						headerEl.innerHTML = title1;
 						contextEl.innerHTML = context;
@@ -301,7 +301,7 @@ export default {
 .map_wrap, .map_wrap * {margin:0;padding:0;font-family:'Malgun Gothic',dotum,'돋움',sans-serif;font-size:12px;}
 .map_wrap a, .map_wrap a:hover, .map_wrap a:active{color:#000;text-decoration: none;}
 .map_wrap {position:relative;width:130vh;height:80vh;margin-left:15%;}
-#menu_wrap {position:absolute;top:0;left:0;bottom:0;width:250px;margin:10px 0 30px 10px;padding:5px;overflow-y:auto;background: #ffffff;z-index: 1;font-size:12px;border-radius: 10px;margin-left:130vh}
+#menu_wrap {position:absolute;top:0;left:0;bottom:0;width:250px;margin:10px 0 30px 10px;padding:5px;overflow-y:auto;background:rgba(255,255,255,0.3);z-index: 1;font-size:12px;border-radius: 10px;margin-left:130vh}
 .bg_white {background:#fff;}
 #menu_wrap hr {display: block; height: 1px;border: 0; border-top: 2px solid #5F5F5F;margin:3px 0;}
 #menu_wrap .option{text-align: center;}
@@ -333,4 +333,27 @@ export default {
 #placesList .item .marker_15 {background-position: 0 -654px;}
 #pagination a {display:inline-block;margin-right:10px;}
 #pagination .on {font-weight: bold; cursor: default;color:#777;}
+#modalHeader{
+	font-size: 3rem;
+	font-family: 'BMHANNAPro';
+	color:royalblue;
+	text-align:center;
+	letter-spacing: 0.2rem;
+
+}
+#modalBody{
+	font-size: 2rem;
+	font-family: 'BMHANNAAir';
+	letter-spacing: 0.1rem;
+}
+#shopURL{
+	font-size: 0.8rem;
+	color: blue;
+	font-style: line;
+	letter-spacing: 0;
+}
+
+#shopURL:hover{
+	text-decoration: underline;
+}
 </style>
