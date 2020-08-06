@@ -7,7 +7,6 @@
 				<!-- <sideList v-bind:sort="name"></sideList> -->
 			</div>
 		</div>
-		<VueFooter></VueFooter>
 	</div>
 </template>
 
@@ -49,7 +48,7 @@ export default {
   position:absolute;
   margin:auto;
   margin-left:auto;
-  width:70%;
+  width:100%;
   text-align:center;
 }
 .formWrapper{
