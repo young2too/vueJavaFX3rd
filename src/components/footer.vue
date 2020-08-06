@@ -2,7 +2,7 @@
 	<div id="footerWrapper">
 		<ul>
 			<li>개발자 : 이영기, 오혜원, 정동준, 양예주, 김준용 </li><br>
-			<li>주소 : 서울특별시 종로구 묘동 돈화문로 26 kg아이티뱅크</li><br>
+			<li>주소 : 서울특별시 종로구 묘동 돈화문로 26 KG아이티뱅크 401</li><br>
 			<li>대표메일 : <a href='mailto:abcd@naver.com'>abcd@naver.com</a></li><br>
 			<li>고객센터 : <a href='tel:010-1234-5678'>010-1234-5678</a></li><br>
 		</ul>
@@ -23,8 +23,9 @@ export default {
 
 <style scoped>
 #cuponImg{
-	width:300px;
-	height:200px;
+	width: auto; height: auto;
+   	max-width: 15rem;
+    max-height: 15rem;
 }
 
 #first{
@@ -32,41 +33,37 @@ export default {
 	height:60px;
 }
 
-/* @font-face {
-	font-family: "Juaaa";
-	src: url('../assets/footerImg/BMJUA_ttf.ttf');
-} */
 #footerWrapper{
-	text-align:left;
-	font-weight:bold;
-	font-size:16px;
 	left:0px;
 	bottom: 0px;
 	width:100%;
-	height:230px;
-	padding-top: 20%;
-	margin-left: 20%;
-
-/* 	padding: 20px;
-	background-color: rgba(4, 157, 191, 0.5);
-	border-radius: 50px 50px; */
+	padding-top: 12%;
+	margin-left: 7%;
+	word-spacing: 1rem;
+}
+li{
+	font-size: 3rem;
+	font-family: 'BMHANNAPro';
+	text-align:left;
+	list-style: none;
+	color: white;
 }
 
 #cupon{
-		float:left;
-		margin-left:100px;
-		width:300px;
-		height:200px;
+	margin-left:61%;
+	width: auto; height: auto;
+   	max-width: 10rem;
+    max-height: 10rem;
 }
 img:hover{
   transform:scale(1.0);
   transition : none;
 }
-ul{
+/* ul{
 	list-style: none;
 	font-size: 20px;
 	float:left;
-}
+} */
 
 
 a:link { color: darkslategray; text-decoration: none; }
