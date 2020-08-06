@@ -17,8 +17,8 @@ export default {
 <style scoped>
 
 #KGImg{
-	width:100px;
-	height:40px;
+	width:170px;
+	height:80px;
 }
 #KGImg:hover{
 	transition: none;
@@ -27,7 +27,7 @@ export default {
 
 #KGBtnWrapper{
 	display: inline;
-	margin:0;
+	margin:10px;
 	padding:0;
 }
 
