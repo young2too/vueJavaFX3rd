@@ -76,8 +76,10 @@ body{
 .fixedHeader{
   position:fixed;
   top:0px;
+  width:100%;
   z-index:500;
   margin-left:9.5%;
+  margin-top:-2%;
 }
 
 .fixedUp{
